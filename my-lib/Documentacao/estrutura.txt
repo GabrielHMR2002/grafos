@@ -1,22 +1,19 @@
 Graph-library/
-├── Graph/
-│   ├── __init__.py                 # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│   ├── graph/                      # Pasta contendo implementações das representações de grafos.
-│   │   ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│   │   ├── graph.py                # Contém a classe Grafo e alguns de seus metodos.
-│   └── algorithms/                 # Pasta contendo implementações de algoritmos de manipulação de grafos.  NAO CRIADO AINDA
-│       ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.  NAO CRIADO AINDA
-│       ├── tarjan.py               # Implementação do algoritmo de Tarjan para detecção de pontes em grafos.  NAO CRIADO AINDA
-│       ├── fleury.py               # Implementação do Algoritmo de Fleury para encontrar caminhos eulerianos.  NAO CRIADO AINDA
-│       ├── naive_bridge.py         # Implementação do método ingênuo para detecção de pontes, utilizando busca em profundidade ou  largura.  NAO CRIADO AINDA
-│       ├── kosaraju.py             # Implementação do algoritmo de Kosaraju para encontrar componentes fortemente conectados.  NAO CRIADO AINDA
-├── data/                           # Pasta para armazenar arquivos de grafos de exemplo.  NAO CRIADO AINDA
-│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto. 
-│       ├── graph_100.txt           # Exemplo de grafo com 100 vértices.  NAO CRIADO AINDA
-│       ├── graph_1000.txt          # Exemplo de grafo com 1000 vértices.  NAO CRIADO AINDA
-│       ├── graph_10000.txt         # Exemplo de grafo com 10000 vértices.  NAO CRIADO AINDA
-│       ├── graph_100000.txt        # Exemplo de grafo com 100000 vértices.  NAO CRIADO AINDA
 ├── export/                         # Pasta para armazenar os grafos exportados para visualização em softwares como Gephi.
 │   └── graphs.gexf                 # Arquivos exportados no formato GEXF, para visualização em ferramentas como Gephi.
-├── requirements.txt                # Arquivo contendo as dependências do projeto (bibliotecas Python necessárias).  NAO CRIADO AINDA
+├── Graph/
+│   │   ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
+│   │   ├── graph.py                # Contém a classe Grafo e alguns de seus metodos.
+│   └── algorithms/                 # Pasta contendo implementações de algoritmos de manipulação de grafos.  ## NÃO CRIADO AINDA
+│       ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.  ## NÃO CRIADO AINDA
+│       ├── tarjan.py               # Implementação do algoritmo de Tarjan para detecção de pontes em grafos.  ## NÃO CRIADO AINDA
+│       ├── fleury.py               # Implementação do Algoritmo de Fleury para encontrar caminhos eulerianos.  ## NÃO CRIADO AINDA
+│       ├── kosaraju.py             # Implementação do algoritmo de Kosaraju para encontrar componentes fortemente conectados.  ## NÃO CRIADO AINDA
+├── data/                           # Pasta para armazenar arquivos de grafos de exemplo.  ## NÃO CRIADO AINDA
+│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto. 
+│       ├── graph_100.txt           # Exemplo de grafo com 100 vértices.  ## NÃO CRIADO AINDA
+│       ├── graph_1000.txt          # Exemplo de grafo com 1000 vértices.  ## NÃO CRIADO AINDA
+│       ├── graph_10000.txt         # Exemplo de grafo com 10000 vértices.  ## NÃO CRIADO AINDA
+│       ├── graph_100000.txt        # Exemplo de grafo com 100000 vértices.  ## NÃO CRIADO AINDA
+├── requirements.txt                # Arquivo contendo as dependências do projeto (bibliotecas Python necessárias).  ## NÃO CRIADO AINDA
 ├── README.md                       # Instruções e resumo básico sobre o projeto, como instalar dependências e rodar o programa.
