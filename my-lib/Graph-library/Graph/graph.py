@@ -1,13 +1,13 @@
 class Graph:
     def __init__(self, qtd_vertices, direcionado=False):
         self.vertices = {}
-        self.direcionado = direcionado  # Define se o grafo será direcionado ou não
+        self.direcionado = direcionado
         self.matriz_adjacencia = None
         self.matriz_incidencia = None
 
-        # Adiciona os vértices de acordo com a quantidade passada
         for i in range(qtd_vertices):
-            vertice = chr(97 + i)  # Gera vértices com nomes 'a', 'b', 'c', etc.
+            # Gera vértices com nomes 'a', 'b', 'c', etc.
+            vertice = chr(97 + i)
             self.adicionar_vertice(vertice)
 
     def adicionar_vertice(self, vertice):
@@ -18,7 +18,7 @@ class Graph:
         if vertice1 in self.vertices and vertice2 in self.vertices:
             self.vertices[vertice1].append(vertice2)
             if not self.direcionado:
-                self.vertices[vertice2].append(vertice1)  # Para grafos não direcionados
+                self.vertices[vertice2].append(vertice1)
 
     def remover_vertice(self, vertice):
         if vertice in self.vertices:
@@ -45,7 +45,8 @@ class Graph:
         return arestas
 
 
-################################################################################################## GRAFOS NAO DIRECIONAIS
+# GRAFOS NAO DIRECIONAIS
+
 
     def criar_matriz_adjacencia_grafo_nao_direcional(self):
         num_vertices = len(self.vertices)
@@ -58,7 +59,7 @@ class Graph:
                 j = vertices_list.index(adjacente)
                 self.matriz_adjacencia[i][j] = 1
                 if not self.direcionado:
-                    self.matriz_adjacencia[j][i] = 1  # Para grafos não direcionados
+                    self.matriz_adjacencia[j][i] = 1
 
     def mostrar_matriz_adjacencia_grafo_nao_direcional(self):
         if self.matriz_adjacencia:
@@ -90,4 +91,19 @@ class Graph:
         for vertice in self.vertices:
             print(f'{vertice}: {self.vertices[vertice]}')
 
-################################################################################################## GRAFOS  DIRECIONAIS
+# GRAFOS  DIRECIONAIS
+
+    def criar_matriz_adjacencia_grafo_direcional(self):
+        print('Não Implementado')
+
+    def mostrar_matriz_adjacencia_grafo_direcional(self):
+        print('Não Implementado')
+
+    def criar_matriz_incidencia_grafo_direcional(self):
+        print('Não Implementado')
+
+    def mostrar_matriz_incidencia_grafo_direcional(self):
+        print('Não Implementado')
+
+    def mostrar_lista_adjacencia_grafo_direcional(self):
+        print('Não Implementado')
