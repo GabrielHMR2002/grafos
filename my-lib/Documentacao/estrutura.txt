@@ -1,34 +1,23 @@
 Graph-library/
-├── src/
+├── Graph/
 │   ├── __init__.py                 # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│   ├── main.py                     # Arquivo principal do projeto, onde o programa será executado.
+│   ├── main.py                     # Arquivo principal do projeto, onde o programa será executado. NAO CRIADO AINDA
 │   ├── graph/                      # Pasta contendo implementações das representações de grafos.
 │   │   ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
 │   │   ├── graph.py                # Contém a classe Grafo e alguns de seus metodos.
-│   │   ├── adjacency_matrix.py     # Implementação da representação de grafos usando Matriz de Adjacência.
-│   │   ├── incidence_matrix.py     # Implementação da representação de grafos usando Matriz de Incidência.
-│   │   ├── adjacency_list.py       # Implementação da representação de grafos usando Lista de Adjacência.
-│   └── algorithms/                 # Pasta contendo implementações de algoritmos de manipulação de grafos.
-│       ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│       ├── tarjan.py               # Implementação do algoritmo de Tarjan para detecção de pontes em grafos.
-│       ├── fleury.py               # Implementação do Algoritmo de Fleury para encontrar caminhos eulerianos.
-│       ├── naive_bridge.py         # Implementação do método ingênuo para detecção de pontes, utilizando busca em profundidade ou largura.
-│       ├── kosaraju.py             # Implementação do algoritmo de Kosaraju para encontrar componentes fortemente conectados.
-├── tests/                          # Pasta dedicada aos testes unitários do projeto.
-│   ├── __init__.py                 # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│   ├── test_adjacency_matrix.py    # Testes unitários para a representação de grafos com Matriz de Adjacência.
-│   ├── test_incidence_matrix.py    # Testes unitários para a representação de grafos com Matriz de Incidência.
-│   ├── test_adjacency_list.py      # Testes unitários para a representação de grafos com Lista de Adjacência.
-│   ├── test_algorithms.py          # Testes unitários para os algoritmos de manipulação de grafos (Tarjan, Fleury, Kosaraju, etc.).
-├── data/                           # Pasta para armazenar arquivos de grafos de exemplo.
-│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto.
-│       ├── graph_100.txt           # Exemplo de grafo com 100 vértices.
-│       ├── graph_1000.txt          # Exemplo de grafo com 1000 vértices.
-│       ├── graph_10000.txt         # Exemplo de grafo com 10000 vértices.
-│       ├── graph_100000.txt        # Exemplo de grafo com 100000 vértices.
+│   └── algorithms/                 # Pasta contendo implementações de algoritmos de manipulação de grafos.  NAO CRIADO AINDA
+│       ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.  NAO CRIADO AINDA
+│       ├── tarjan.py               # Implementação do algoritmo de Tarjan para detecção de pontes em grafos.  NAO CRIADO AINDA
+│       ├── fleury.py               # Implementação do Algoritmo de Fleury para encontrar caminhos eulerianos.  NAO CRIADO AINDA
+│       ├── naive_bridge.py         # Implementação do método ingênuo para detecção de pontes, utilizando busca em profundidade ou  largura.  NAO CRIADO AINDA
+│       ├── kosaraju.py             # Implementação do algoritmo de Kosaraju para encontrar componentes fortemente conectados.  NAO CRIADO AINDA
+├── data/                           # Pasta para armazenar arquivos de grafos de exemplo.  NAO CRIADO AINDA
+│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto. 
+│       ├── graph_100.txt           # Exemplo de grafo com 100 vértices.  NAO CRIADO AINDA
+│       ├── graph_1000.txt          # Exemplo de grafo com 1000 vértices.  NAO CRIADO AINDA
+│       ├── graph_10000.txt         # Exemplo de grafo com 10000 vértices.  NAO CRIADO AINDA
+│       ├── graph_100000.txt        # Exemplo de grafo com 100000 vértices.  NAO CRIADO AINDA
 ├── export/                         # Pasta para armazenar os grafos exportados para visualização em softwares como Gephi.
 │   └── graphs.gexf                 # Arquivos exportados no formato GEXF, para visualização em ferramentas como Gephi.
-├── docs/                           # Pasta para documentação do projeto.
-│   └── report.md                   # Relatório contendo a documentação do projeto e explicações dos algoritmos implementados.
-├── requirements.txt                # Arquivo contendo as dependências do projeto (bibliotecas Python necessárias).
+├── requirements.txt                # Arquivo contendo as dependências do projeto (bibliotecas Python necessárias).  NAO CRIADO AINDA
 ├── README.md                       # Instruções e resumo básico sobre o projeto, como instalar dependências e rodar o programa.
