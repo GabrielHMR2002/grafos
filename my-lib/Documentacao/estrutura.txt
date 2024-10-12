@@ -1,7 +1,6 @@
 Graph-library/
 ├── Graph/
 │   ├── __init__.py                 # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
-│   ├── main.py                     # Arquivo principal do projeto, onde o programa será executado. NAO CRIADO AINDA
 │   ├── graph/                      # Pasta contendo implementações das representações de grafos.
 │   │   ├── __init__.py             # Arquivo necessário para o Python reconhecer esta pasta como um pacote.
 │   │   ├── graph.py                # Contém a classe Grafo e alguns de seus metodos.
