@@ -10,6 +10,8 @@ class Graph:
             vertice = chr(97 + i)
             self.adicionar_vertice(vertice)
 
+# GRAFOS NAO DIRECIONAIS
+
     def adicionar_vertice(self, vertice):
         if vertice not in self.vertices:
             self.vertices[vertice] = []
@@ -43,10 +45,6 @@ class Graph:
                 if self.direcionado or {vertice, adjacente} not in arestas:
                     arestas.append({vertice, adjacente})
         return arestas
-
-
-# GRAFOS NAO DIRECIONAIS
-
 
     def criar_matriz_adjacencia_grafo_nao_direcional(self):
         num_vertices = len(self.vertices)
