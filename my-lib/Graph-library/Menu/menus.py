@@ -1,10 +1,11 @@
 from Interface import interface
-from Graph.graph import Graph
+from Graph.graph import GraphNotDirected
 
-def criar_grafo_exemplo():
-    qtd_vertices = 5  
-    direcionado = False  
-    grafo = Graph(qtd_vertices, direcionado)
+
+def criar_grafo_nao_direcional_exemplo():
+    qtd_vertices = 5
+    direcionado = False
+    grafo = GraphNotDirected(qtd_vertices, direcionado)
 
     grafo.adicionar_aresta('a', 'b')  # e1
     grafo.adicionar_aresta('a', 'c')  # e2
@@ -13,11 +14,36 @@ def criar_grafo_exemplo():
     grafo.adicionar_aresta('b', 'c')  # e5
     grafo.adicionar_aresta('c', 'd')  # e6
     grafo.adicionar_aresta('d', 'e')  # e7
-    
+
+    # Exportar o grafo para Gephi
+    grafo.criar_matriz_adjacencia_grafo_nao_direcional()
+    grafo.exportGraph()
+
     return grafo
 
+
+def criar_grafo_nao_direcional_exemplo():
+    qtd_vertices = 5
+    direcionado = False
+    grafo = GraphNotDirected(qtd_vertices, direcionado)
+
+    grafo.adicionar_aresta('a', 'b')  # e1
+    grafo.adicionar_aresta('a', 'c')  # e2
+    grafo.adicionar_aresta('b', 'd')  # e3
+    grafo.adicionar_aresta('b', 'e')  # e4
+    grafo.adicionar_aresta('b', 'c')  # e5
+    grafo.adicionar_aresta('c', 'd')  # e6
+    grafo.adicionar_aresta('d', 'e')  # e7
+
+    # Exportar o grafo para Gephi
+    grafo.criar_matriz_adjacencia_grafo_nao_direcional()
+    grafo.exportGraph()
+
+    return grafo
+
+
 def mostrar_menu_principal():
-    grafo = criar_grafo_exemplo()
+    grafo = criar_grafo_nao_direcional_exemplo()
 
     while True:
         print("\n--- Menu Principal ---")
@@ -36,6 +62,7 @@ def mostrar_menu_principal():
             break
         else:
             print("Opção inválida, tente novamente.")
+
 
 def mostrar_representacao_opcoes(grafo):
     while True:

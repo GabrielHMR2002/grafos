@@ -1,16 +1,21 @@
-class Graph:
+import os
+import subprocess
+import networkx as nx  # Certifique-se de que o NetworkX esteja instalado
+
+
+class GraphNotDirected:
     def __init__(self, qtd_vertices, direcionado=False):
         self.vertices = {}
         self.direcionado = direcionado
         self.matriz_adjacencia = None
         self.matriz_incidencia = None
+        self.num_vertices = qtd_vertices  # Adiciona num_vertices para ser usado no exportGraph
 
         for i in range(qtd_vertices):
-            # Gera vértices com nomes 'a', 'b', 'c', etc.
-            vertice = chr(97 + i)
+            vertice = chr(97 + i)  # Gera vértices com nomes 'a', 'b', 'c', etc.
             self.adicionar_vertice(vertice)
 
-# GRAFOS NAO DIRECIONAIS
+    # GRAFOS NAO DIRECIONAIS
 
     def adicionar_vertice(self, vertice):
         if vertice not in self.vertices:
@@ -89,7 +94,7 @@ class Graph:
         for vertice in self.vertices:
             print(f'{vertice}: {self.vertices[vertice]}')
 
-# GRAFOS  DIRECIONAIS
+    # GRAFOS DIRECIONAIS
 
     def criar_matriz_adjacencia_grafo_direcional(self):
         print('Não Implementado')
@@ -105,3 +110,30 @@ class Graph:
 
     def mostrar_lista_adjacencia_grafo_direcional(self):
         print('Não Implementado')
+
+ # EXPORTAÇÃO
+    def exportGraph(self):
+        G = nx.Graph()
+
+        # Converte a matriz de adjacência em um grafo NetworkX
+        for i in range(self.num_vertices):
+            for j in range(self.num_vertices):
+                if self.matriz_adjacencia[i][j] != 0:
+                    G.add_edge(i, j, weight=self.matriz_adjacencia[i][j], label=str(self.matriz_adjacencia[i][j]))
+
+        # Exporta o grafo para o formato GEXF
+        gexf_file = "grafo.gexf"
+        nx.write_gexf(G, gexf_file)
+
+        # Caminho do executável do Gephi
+        gephi_path = r"C:\Users\gabri\OneDrive\Área de Trabalho\appgrafos\gephi.lnk" # Altere para o caminho correto do Gephi
+        gexf_path = os.path.abspath(gexf_file)  # Caminho absoluto do arquivo GEXF
+
+        # Abre o Gephi com o arquivo GEXF usando o caminho absoluto
+        try:
+            subprocess.run([gephi_path, gexf_path], check=True)
+            print("Gephi aberto com sucesso com o arquivo:", gexf_path)
+        except FileNotFoundError:
+            print("Erro: Não foi possível encontrar o executável do Gephi.")
+        except Exception as e:
+            print(f"Ocorreu um erro ao tentar abrir o Gephi: {e}")

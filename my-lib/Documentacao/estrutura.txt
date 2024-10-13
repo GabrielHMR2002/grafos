@@ -10,7 +10,7 @@ Graph-library/
 │       ├── fleury.py               # Implementação do Algoritmo de Fleury para encontrar caminhos eulerianos.  ## NÃO CRIADO AINDA
 │       ├── kosaraju.py             # Implementação do algoritmo de Kosaraju para encontrar componentes fortemente conectados.  ## NÃO CRIADO AINDA
 ├── data/                           # Pasta para armazenar arquivos de grafos de exemplo.  ## NÃO CRIADO AINDA
-│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto. 
+│   └── example_graphs/             # Subpasta com arquivos de grafos para testar o desempenho e a funcionalidade do projeto. ## NÃO CRIADO AINDA
 │       ├── graph_100.txt           # Exemplo de grafo com 100 vértices.  ## NÃO CRIADO AINDA
 │       ├── graph_1000.txt          # Exemplo de grafo com 1000 vértices.  ## NÃO CRIADO AINDA
 │       ├── graph_10000.txt         # Exemplo de grafo com 10000 vértices.  ## NÃO CRIADO AINDA
